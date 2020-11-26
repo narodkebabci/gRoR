@@ -1,11 +1,4 @@
 
-# gROR - get rid of Redundancy
-# load necessary libraries before use the function 
-
-library(dplyr)
-library(stringi)
-library(tidyr)
-
 class_reduction <- function(data, classes, DDG, SS = NULL, ASA = NULL){
   
   # get the unique class names from the data (~16)
