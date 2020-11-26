@@ -130,6 +130,8 @@ class_formation <- function(data, mutations){
                          c_ali, c_aro, c_p, c_c))
 
   df <- df %>% relocate(Classes, .after = mutations)
+  
+  df2 <- subset(df, select = -c(wt, mt))
 
-  return(df)
+  return(df2)
 }
