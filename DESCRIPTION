@@ -1,0 +1,19 @@
+Package: gRoR 
+Type: Package
+Title: Compilation of an unbiased mutation dataset
+Version: 0.1.0
+Authors@R: c(person("Narod","Kebabc<U+0131>", 
+                    role = c("cre", "aut"), 
+                    email = "narod.kebabci@gmail.com"),
+             person("Emel", "Timucin",
+                    role = "aut",
+                    email = "emeldtimucin@gmail.com"))
+Maintainer: Narod Kebabci <narod.kebabci@gmail.com>
+Description: Creates non-redundant mutation datasets for training & testing of protein stability predictors
+License: "Unlimited"
+Encoding: UTF-8
+LazyData: false
+Imports: dplyr, 
+         tidyr, 
+         stringi
+RoxygenNote: 7.1.1
