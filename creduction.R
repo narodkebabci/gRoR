@@ -4,9 +4,6 @@ class_reduction <- function(data, classes, DDG, SS = NULL, ASA = NULL){
   # get the unique class names from the data (~16)
   label <- unique(data[, classes])
   
-  # set DDG value
-  # DDG <- data[, DDG]
-  
   # idx <- matrix(ncol = ncol(data), nrow = 0)
   
   if (is.null(ASA) & !is.null(SS)){
