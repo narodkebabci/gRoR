@@ -1,4 +1,4 @@
-# gROR
+# gRoR
 A workflow to get rid of redundant mutations
     
 ## Installation
@@ -12,6 +12,7 @@ devtools::install_github("narodkebabci/gROR")
 
 ## Usage
 
-gROR has two main objectives:
-1.
-2.
+`gRoR` has two main objectives:
+
+1. Construction of class/duplet labels (achieved via `class_formation()` and `duplet_formation()`)
+2. Compilation of unbiased mutation datasets (achieved via `class_reduction()` and `duplet_reduction()`)
