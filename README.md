@@ -3,12 +3,12 @@ A workflow to get rid of redundant mutations
     
 ## Installation
 
-You can install the latest released version of 'gRoR' from Github with:
+You can install the latest released version of `gRoR` from Github with:
 
-"""
-install.packages("devtools")
-devtools::install_github("narodkebabci/gROR", build_vignettes = TRUE)
-"""
+```R
+# install.packages("devtools")
+devtools::install_github("narodkebabci/gROR")
+```
 
 ## Usage
 
