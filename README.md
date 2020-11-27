@@ -6,7 +6,7 @@ A workflow to get rid of redundant mutations
 You can install the latest released version of `gRoR` from Github with:
 
 ```R
-# install.packages("devtools")
+install.packages("devtools")
 devtools::install_github("narodkebabci/gROR")
 ```
 
