@@ -17,6 +17,9 @@ duplet_reduction(data, duplets, DDG, SS = NULL, ASA = NULL)
 
 \item{ASA}{Default is Null. Specify the column name that contains relative ASA information}
 }
+\value{
+A list of reduced dataset and a box plot
+}
 \description{
 This function takes the data frame, labels, experimental DDG, and the mutations' biochemical
 features. With this function, the dataset can be filtered based on duplets, secondary structure,

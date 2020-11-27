@@ -1,3 +1,14 @@
+#' @title Build class labels based on mutations
+#'
+#' @description This function takes the data frame and mutation column to form amino acid classes
+#'
+#' @param data A data frame containing mutations that will be classified
+#' @param mutations Specify the column name that contains the mutations
+#'
+#' @examples
+#' class_formation(data = df, mutations = "Mutation")
+#'
+#' @export
 
 class_formation <- function(data, mutations){
 
@@ -130,7 +141,7 @@ class_formation <- function(data, mutations){
                          c_ali, c_aro, c_p, c_c))
 
   df <- df %>% relocate(Classes, .after = mutations)
-  
+
   df2 <- subset(df, select = -c(wt, mt))
 
   return(df2)

@@ -1,3 +1,23 @@
+#' @title Compilation of a non-redundant dataset based on classes
+#'
+#' @description This function takes the data frame, labels, experimental DDG, and the mutations' biochemical
+#' features. With this function, the dataset can be filtered based on class, secondary structure,
+#' and relative ASA of the mutations.
+#'
+#' @param data A redundant dataset of mutations
+#' @param classes Column name of labels
+#' @param DDG Column name of Experimental DDG values
+#' @param SS Default is Null. Specify the column name that contains secondary structure information
+#' @param ASA Default is Null. Specify the column name that contains relative ASA information
+#'
+#' @examples
+#' class_reduction(data = df, classes = "Classes", DDG = "Experimental")
+#' class_reduction(data = df, classes = "Classes", DDG = "Experimental", SS = "SStructure")
+#'
+#' @return
+#' A list of reduced dataset and a box plot
+#'
+#' @export
 
 class_reduction <- function(data, classes, DDG, SS = NULL, ASA = NULL){
 
@@ -266,6 +286,42 @@ class_reduction <- function(data, classes, DDG, SS = NULL, ASA = NULL){
     }
   }
 
-  return(idx)
+  #return(idx)
+
+  # label the datasets to create box plots
+
+  if (nrow(idx) > nrow(data)){
+    t <- nrow(data)
+    r <- nrow(idx)
+
+    data[, "Labels"] <- paste(paste("Total", "(n=", sep=" "), t, ")", sep="")
+    names(idx)[names(idx) == "Labels"] <- paste(paste("Reduced", "(n=", sep=" "), r, ")", sep="")
+
+    all <- rbind(data, idx)
+    names(all)[names(all) == DDG] <- "Values"
+
+  }else {
+
+  t <- nrow(data)
+  r <- nrow(idx)
+
+  data[, "Labels"] <- paste(paste("Total", "(n=", sep=" "), t, ")", sep="")
+  idx[, "Labels"] <- paste(paste("Reduced", "(n=", sep=" "), r, ")", sep="")
+
+  all <- rbind(data, idx)
+  names(all)[names(all) == DDG] <- "Values"
+
+  }
+
+  # create Box plot
+  bp <- ggplot(all, aes(x=Labels, y=Values)) +
+    geom_boxplot(aes(fill = Labels)) +
+    labs(x="Labels", y="DDG Values") +
+    theme_light() +
+    theme(legend.position = "right")
+
+  # return(bp)
+
+  return(list(idx[,-c(ncol(idx))],bp))
 
 }
