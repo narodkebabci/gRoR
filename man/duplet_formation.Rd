@@ -12,7 +12,8 @@ duplet_formation(data, mutations)
 \item{mutations}{Specify the column name that contains the mutations}
 }
 \description{
-This function takes the data frame and mutation column to form WT-MT duplets
+This function takes the data frame and mutation column to form WT-MT duplets. It also
+prints the missing duplets within the dataset.
 }
 \examples{
 duplet_formation(data = df, mutations = "Mutation")

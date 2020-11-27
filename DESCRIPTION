@@ -17,7 +17,7 @@ Imports: dplyr,
          tidyr, 
          stringi,
          ggplot2,
-         ggpubr
+         stats
 RoxygenNote: 7.1.1
 Depends: 
     R (>= 2.10)

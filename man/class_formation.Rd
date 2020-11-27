@@ -12,7 +12,8 @@ class_formation(data, mutations)
 \item{mutations}{Specify the column name that contains the mutations}
 }
 \description{
-This function takes the data frame and mutation column to form amino acid classes
+This function takes the data frame and the mutation column to form amino acid classes. It also
+prints the missing classes within the dataset.
 }
 \examples{
 class_formation(data = df, mutations = "Mutation")
