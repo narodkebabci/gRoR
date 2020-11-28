@@ -45,7 +45,7 @@ class_formation <- function(data, mutations){
   c_c <- list()
 
   # extract the wt in a vector
-  wt <- vector("character", nrow(data))
+  wt <- vector("character", length = nrow(data))
 
   for (i in 1:nrow(data)){
     wt[i] <- stri_sub(data[, mutations][i], from=-stri_length(data[, mutations][i]),
@@ -53,7 +53,7 @@ class_formation <- function(data, mutations){
   }
 
   # extract the mt in a vector
-  mt <- vector("character", nrow(data))
+  mt <- vector("character", length = nrow(data))
 
   for (j in 1:nrow(data)){
     mt[j] <- stri_sub(data[, mutations][j], from=stri_length(data[, mutations][j]),
