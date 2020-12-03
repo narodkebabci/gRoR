@@ -1,5 +1,9 @@
 # gRoR
 A workflow to get rid of redundant mutations
+
+## How it works?
+
+![Image](w.tiff)
     
 ## Installation
 
