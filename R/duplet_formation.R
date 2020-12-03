@@ -51,7 +51,7 @@ duplet_formation <- function(data, mutations){
                     "LA","LC","LD","LE","LF","LG","LH","LI","LK","LM","LN","LP","LQ","LR","LS","LT","LV","LW","LY",
                     "MA","MC","MD","ME","MF","MG","MH","MI","MK","ML","MN","MP","MQ","MR","MS","MT","MV","MW","MY",
                     "NA","NC","ND","NE","NF","NG","NH","NI","NK","NL","NM","NP","NQ","NR","NS","NT","NV","NW","NY",
-                    "PA","PC","PD","PE","PF","PG","PL","PI","PK","PL","PN","PM","PQ","PR","PS","PT","PV","PW","PY",
+                    "PA","PC","PD","PE","PF","PG","PH","PI","PK","PL","PN","PM","PQ","PR","PS","PT","PV","PW","PY",
                     "QA","QC","QD","QE","QF","QG","QH","QI","QK","QL","QN","QM","QP","QR","QS","QT","QV","QW","QY",
                     "RA","RC","QD","RE","RF","RG","RH","RI","RK","RL","RN","RM","RP","RQ","RS","RT","RV","RW","RY",
                     "SA","SC","SD","SE","SF","SG","SH","SI","SK","SL","SM","SN","SP","SQ","SR","ST","SV","SW","SY",

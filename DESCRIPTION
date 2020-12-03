@@ -17,6 +17,7 @@ Imports: dplyr,
          tidyr, 
          stringi,
          ggplot2,
+         corrplot,
          stats
 RoxygenNote: 7.1.1
 Depends: 
