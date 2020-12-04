@@ -3,7 +3,7 @@ A workflow to get rid of redundant mutations
 
 ## How it works?
 
-
+![](https://github.com/narodkebabci/gRoR/blob/media/w.png)
     
 ## Installation
 
