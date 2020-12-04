@@ -3,7 +3,7 @@ A workflow to get rid of redundant mutations
 
 ## How it works?
 
-![](w.png)
+
     
 ## Installation
 
