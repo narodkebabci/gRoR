@@ -1,6 +1,7 @@
 #' @title Build class labels based on mutations
 #'
-#' @description This function takes the data frame and the mutation column to form amino acid classes. It also
+#' @description This function takes the data frame and the mutation column to group the
+#' amino acids into four main classes based on their R groups' properties. It also
 #' prints the missing classes within the dataset.
 #'
 #' @param data A data frame containing mutations that will be classified

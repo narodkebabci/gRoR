@@ -13,7 +13,7 @@ class_frequency(data, mutations)
 }
 \description{
 This function takes the data frame and the mutation column to visualize the frequency of the
-classes.
+classes
 }
 \examples{
 class_frequency(data = df, mutations = "Mutation")

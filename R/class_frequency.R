@@ -1,7 +1,7 @@
 #' @title Visualize the distribution of the classes
 #'
 #' @description This function takes the data frame and the mutation column to visualize the frequency of the
-#' classes.
+#' classes
 #'
 #' @param data A data frame
 #' @param mutations Specify the column name that contains the mutations
@@ -46,15 +46,15 @@ class_frequency <- function(data, mutations){
   q$WT[q$WT %in% ali] <- "Aliphatic"
   q$WT[q$WT %in% aro] <- "Aromatic"
   q$WT[q$WT %in% p] <- "Polar"
-  q$WT[q$WT %in% c] <- "Charge"
+  q$WT[q$WT %in% c] <- "Charged"
 
   q$MT[q$MT %in% ali] <- "Aliphatic"
   q$MT[q$MT %in% aro] <- "Aromatic"
   q$MT[q$MT %in% p] <- "Polar"
-  q$MT[q$MT %in% c] <- "Charge"
+  q$MT[q$MT %in% c] <- "Charged"
 
   # list of class labels
-  CC = c("Aliphatic", "Aromatic", "Polar", "Charge")
+  CC = c("Aliphatic", "Aromatic", "Polar", "Charged")
 
   # initialize matrix with 0
   udx <- matrix(0, ncol = 4, nrow = 4)

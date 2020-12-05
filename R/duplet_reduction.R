@@ -1,7 +1,7 @@
 #' @title Compilation of a non-redundant dataset based on duplets
 #'
-#' @description This function takes the data frame, labels, experimental DDG, and the mutations' biochemical
-#' features. With this function, the dataset can be filtered based on duplets, secondary structure,
+#' @description This function takes the data frame, duplet labels, experimental DDG values, and the mutations'
+#' biochemical features. With this function, the dataset can be filtered based on duplets, secondary structure,
 #' and relative ASA of the mutations.
 #'
 #' @param data A redundant dataset of mutations
