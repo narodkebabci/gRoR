@@ -2,6 +2,7 @@
 
 importFrom("stats", "filter", "median")
 export(class_formation)
+export(class_frequency)
 export(class_reduction)
 export(duplet_formation)
 export(duplet_reduction)
