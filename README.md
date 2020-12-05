@@ -1,4 +1,6 @@
 # gRoR
+[![GitHub license](https://img.shields.io/github/license/narodkebabci/gRoR?style=plastic)](https://github.com/narodkebabci/gRoR/blob/main/LICENSE)
+
 A workflow to get rid of redundant mutations
 
 ## How it works?
