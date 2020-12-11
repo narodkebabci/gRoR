@@ -13,7 +13,7 @@ You can install the latest released version of `gRoR` from Github with:
 
 ```R
 install.packages("devtools")
-devtools::install_github("narodkebabci/gROR")
+devtools::install_github("narodkebabci/gRoR")
 ```
 
 ## Usage
