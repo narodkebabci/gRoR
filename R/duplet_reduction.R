@@ -31,6 +31,7 @@ duplet_reduction <- function(data, duplets, DDG, SS = NULL, ASA = NULL){
     for (u in Uduplets){
 
       df <- data[which(data[, duplets] %in% u), ]
+      df <- df[order(df$Experimental),][1:length(df$Experimental), ]
 
       n <- 3
 
@@ -69,6 +70,7 @@ duplet_reduction <- function(data, duplets, DDG, SS = NULL, ASA = NULL){
     for (u in Uduplets){
 
       df <- data[which(data[, duplets] %in% u), ]
+      df <- df[order(df$Experimental),][1:length(df$Experimental), ]
 
       n <- 3
 
@@ -138,7 +140,7 @@ duplet_reduction <- function(data, duplets, DDG, SS = NULL, ASA = NULL){
       }
 
       # pick the max & min values of asa_3
-      if (nrow(asa_3) >= 3){
+      if (nrow(asa_3) >= n){
         idx <- rbind(idx, asa_3[which.max(asa_3[, DDG]),], asa_3[which.min(asa_3[, DDG]),])
       }else {
         idx <- idx
@@ -156,6 +158,7 @@ duplet_reduction <- function(data, duplets, DDG, SS = NULL, ASA = NULL){
       n <- 3
 
       df <- data[which(data[, duplets] %in% u), ]
+      df <- df[order(df$Experimental),][1:length(df$Experimental), ]
 
       for (st in sstructure){
 
@@ -259,6 +262,7 @@ duplet_reduction <- function(data, duplets, DDG, SS = NULL, ASA = NULL){
     for (u in Uduplets){
 
       df <- data[which(data[, duplets] %in% u), ]
+      df <- df[order(df$Experimental),][1:length(df$Experimental), ]
 
       n <- 3
 
@@ -278,7 +282,7 @@ duplet_reduction <- function(data, duplets, DDG, SS = NULL, ASA = NULL){
       }
 
       # pick the max & min values of m1
-      if (nrow(df) > n){
+      if (nrow(df) >= n){
         idx <- rbind(idx, df[which.max(df[, DDG]),], df[which.min(df[, DDG]),])
       }else {
         idx <- idx

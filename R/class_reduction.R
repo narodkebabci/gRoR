@@ -31,6 +31,7 @@ class_reduction <- function(data, classes, DDG, SS = NULL, ASA = NULL){
     for (l in label){
 
       df <- data[which(data[, classes] %in% l), ]
+      df <- df[order(df$Experimental),][1:length(df$Experimental), ]
 
       n <- 3
 
@@ -69,6 +70,7 @@ class_reduction <- function(data, classes, DDG, SS = NULL, ASA = NULL){
     for (l in label){
 
       df <- data[which(data[, classes] %in% l), ]
+      df <- df[order(df$Experimental),][1:length(df$Experimental), ]
 
       n <- 3
 
@@ -156,6 +158,7 @@ class_reduction <- function(data, classes, DDG, SS = NULL, ASA = NULL){
       n <- 3
 
       df <- data[which(data[, classes] %in% l), ]
+      df <- df[order(df$Experimental),][1:length(df$Experimental), ]
 
       for (st in sstructure){
 
@@ -259,6 +262,7 @@ class_reduction <- function(data, classes, DDG, SS = NULL, ASA = NULL){
     for (l in label){
 
       df <- data[which(data[, classes] %in% l), ]
+      df <- df[order(df$Experimental),][1:length(df$Experimental), ]
 
       n <- 3
 
@@ -278,7 +282,7 @@ class_reduction <- function(data, classes, DDG, SS = NULL, ASA = NULL){
       }
 
       # pick the max & min values of m1
-      if (nrow(df) > n){
+      if (nrow(df) >= n){
         idx <- rbind(idx, df[which.max(df[, DDG]),], df[which.min(df[, DDG]),])
       }else {
         idx <- idx
