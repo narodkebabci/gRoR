@@ -31,7 +31,8 @@ class_reduction <- function(data, classes, DDG, SS = NULL, ASA = NULL){
     for (l in label){
 
       df <- data[which(data[, classes] %in% l), ]
-      df <- df[order(df$Experimental),][1:length(df$Experimental), ]
+
+      df <- df[order(df[, DDG]),][1:length(df[, DDG]),]
 
       n <- 3
 
@@ -70,7 +71,8 @@ class_reduction <- function(data, classes, DDG, SS = NULL, ASA = NULL){
     for (l in label){
 
       df <- data[which(data[, classes] %in% l), ]
-      df <- df[order(df$Experimental),][1:length(df$Experimental), ]
+
+      df <- df[order(df[, DDG]),][1:length(df[, DDG]),]
 
       n <- 3
 
@@ -140,7 +142,7 @@ class_reduction <- function(data, classes, DDG, SS = NULL, ASA = NULL){
       }
 
       # pick the max & min values of asa_3
-      if (nrow(asa_3) >= 3){
+      if (nrow(asa_3) >= n){
         idx <- rbind(idx, asa_3[which.max(asa_3[, DDG]),], asa_3[which.min(asa_3[, DDG]),])
       }else {
         idx <- idx
@@ -158,7 +160,8 @@ class_reduction <- function(data, classes, DDG, SS = NULL, ASA = NULL){
       n <- 3
 
       df <- data[which(data[, classes] %in% l), ]
-      df <- df[order(df$Experimental),][1:length(df$Experimental), ]
+
+      df <- df[order(df[, DDG]),][1:length(df[, DDG]),]
 
       for (st in sstructure){
 
@@ -262,7 +265,8 @@ class_reduction <- function(data, classes, DDG, SS = NULL, ASA = NULL){
     for (l in label){
 
       df <- data[which(data[, classes] %in% l), ]
-      df <- df[order(df$Experimental),][1:length(df$Experimental), ]
+
+      df <- df[order(df[, DDG]),][1:length(df[, DDG]),]
 
       n <- 3
 

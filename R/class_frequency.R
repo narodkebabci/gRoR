@@ -76,8 +76,10 @@ class_frequency <- function(data, mutations){
     udx[lv1, kv1] = 1 + udx[lv1, kv1]
 
 }
-  return(corrplot(udx, method = "color", type = "full", is.corr = FALSE, addgrid.col = TRUE, addCoef.col = "black",
-         tl.pos = "lt", tl.cex = 1.2, tl.col="black", tl.srt=0, cl.pos = "n"))
+  return(corrplot(udx, method = "color", type = "full", is.corr = FALSE, addgrid.col = TRUE,
+                  addCoef.col = "black", cl.lim=c(min(udx)-1, max(udx)+1),
+                  tl.pos = "lt", tl.cex = 1.2, tl.col="black", tl.srt=0, cl.pos = "n",
+                  number.cex = 2))
 
 }
 
