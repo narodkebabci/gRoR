@@ -4,6 +4,8 @@
 #' biochemical features. With this function, the dataset can be filtered based on duplets, secondary structure,
 #' and relative ASA of the mutations.
 #'
+#' @importFrom stats median na.omit
+#'
 #' @param data A redundant dataset of mutations
 #' @param duplets Column name of Duplets
 #' @param DDG Column name of Experimental DDG values

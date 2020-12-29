@@ -1,4 +1,4 @@
-Package: gRoR 
+Package: gRoR
 Type: Package
 Title: Compilation of an unbiased mutation dataset
 Version: 0.1.0
@@ -10,15 +10,14 @@ Authors@R: c(person("Narod","Kebabc<U+0131>",
                     email = "emeldtimucin@gmail.com"))
 Maintainer: Narod Kebabci <narod.kebabci@gmail.com>
 Description: Creates non-redundant mutation datasets for training & testing of protein stability predictors
-License: GPL-3
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: dplyr, 
-         tidyr, 
-         stringi,
-         ggplot2,
-         corrplot,
-         stats
+Imports: stats
 RoxygenNote: 7.1.1
 Depends: 
-    R (>= 3.5.0)
+    R (>= 3.5.0),
+    dplyr, 
+    stringi,
+    ggplot2,
+    corrplot

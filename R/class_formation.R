@@ -230,7 +230,7 @@ class_formation <- function(data, mutations){
                    "Aro-Aro", "Aro-P", "Aro-C", "P-Ali", "P-Aro",
                    "P-P", "P-C", "C-Ali", "C-Aro", "C-P", "C-C")
 
-  absent_classes <- setdiff(class_labels, unique(df2[,"Classes"]))
+  absent_classes <- base::setdiff(class_labels, unique(df2[,"Classes"]))
 
   if (length(absent_classes) > 0){
     print("Here is a list of missing classes:")

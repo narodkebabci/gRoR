@@ -3,6 +3,7 @@
 #' @description This function takes the data frame and the mutation column to visualize the frequency of the
 #' classes
 #'
+#'
 #' @param data A data frame
 #' @param mutations Specify the column name that contains the mutations
 #'

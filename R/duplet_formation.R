@@ -60,7 +60,7 @@ duplet_formation <- function(data, mutations){
                     "WA","WC","WD","WE","WF","WG","WH","WI","WK","WL","WM","WN","WP","WQ","WR","WS","WT","WV","WY",
                     "YA","YC","YD","YE","YF","YG","YH","YI","YK","YL","YM","YN","YP","YQ","YR","YS","YT","YV","YW")
 
-  absent_labels <- setdiff(duplet_labels, unique(data[,"Duplets"]))
+  absent_labels <- base::setdiff(duplet_labels, unique(data[,"Duplets"]))
 
   if (length(absent_labels) > 0){
     print("Here is a list of missing duplets:")
