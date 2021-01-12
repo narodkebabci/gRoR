@@ -12,8 +12,8 @@ class_frequency(data, mutations)
 \item{mutations}{Specify the column name that contains the mutations}
 }
 \description{
-This function takes the data frame and the mutation column to visualize the frequency of the
-classes
+This function takes the data frame and the mutation column
+to visualize the frequency of the classes
 }
 \examples{
 class_frequency(data = df, mutations = "Mutation")

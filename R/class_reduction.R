@@ -5,6 +5,7 @@
 #' and relative ASA of the mutations.
 #'
 #' @importFrom stats median na.omit
+#' @import stringi dplyr ggplot2
 #'
 #' @param data A redundant dataset of mutations
 #' @param classes Column name of labels

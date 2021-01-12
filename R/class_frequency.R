@@ -1,8 +1,9 @@
 #' @title Visualize the distribution of the classes
 #'
-#' @description This function takes the data frame and the mutation column to visualize the frequency of the
-#' classes
+#' @description This function takes the data frame and the mutation column
+#' to visualize the frequency of the classes
 #'
+#' @import stringi corrplot
 #'
 #' @param data A data frame
 #' @param mutations Specify the column name that contains the mutations

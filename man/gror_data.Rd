@@ -11,13 +11,13 @@ A list object
 data(gror_data)
 }
 \description{
-The dataset contains class & duplet labels, secondary structure and relative ASA
-of the mutations.
+The dataset contains experimental DD, secondary structure and relative ASA
+features of the data points.
 }
 \examples{
 data(gror_data)
-class_reduction(gror_data, "Classes", "Experimental")
-duplet_reduction(gror_data, "Duplets", "Experimental")
+class_formation(data=gror_data, mutations="Mutation")
+duplet_formation(data=gror_data, mutations="Mutation")
 
 }
 \keyword{datasets}

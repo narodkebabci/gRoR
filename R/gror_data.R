@@ -1,7 +1,7 @@
 #' Example data to compile
 #'
-#' The dataset contains class & duplet labels, secondary structure and relative ASA
-#' of the mutations.
+#' The dataset contains experimental DD, secondary structure and relative ASA
+#' features of the data points.
 #'
 #' @docType data
 #'
@@ -13,7 +13,7 @@
 #'
 #' @examples
 #' data(gror_data)
-#' class_reduction(gror_data, "Classes", "Experimental")
-#' duplet_reduction(gror_data, "Duplets", "Experimental")
+#' class_formation(data=gror_data, mutations="Mutation")
+#' duplet_formation(data=gror_data, mutations="Mutation")
 #'
 "gror_data"

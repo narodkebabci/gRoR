@@ -5,6 +5,7 @@
 #' and relative ASA of the mutations.
 #'
 #' @importFrom stats median na.omit
+#' @import stringi ggplot2 dplyr
 #'
 #' @param data A redundant dataset of mutations
 #' @param duplets Column name of Duplets

@@ -3,6 +3,8 @@
 #' @description This function takes the data frame and mutation column to form WT-MT duplets. It also
 #' prints the missing duplets within the dataset.
 #'
+#' @import stringi dplyr
+#'
 #' @param data A data frame containing mutations that will be classified
 #' @param mutations Specify the column name that contains the mutations
 #'

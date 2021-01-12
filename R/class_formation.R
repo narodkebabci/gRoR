@@ -4,6 +4,8 @@
 #' amino acids into four main classes based on their R groups' properties. It also
 #' prints the missing classes within the dataset.
 #'
+#' @import stringi dplyr
+#'
 #' @param data A data frame containing mutations that will be classified
 #' @param mutations Specify the column name that contains the mutations
 #'
