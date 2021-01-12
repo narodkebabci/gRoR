@@ -1,4 +1,4 @@
-PDB	Classes	Mutation	Duplets	SStructure	ASA	Experimental
+PDB Classes	Mutation Duplets SStructure	ASA	Experimental
 1BNI	Ali-P	A32C	AC	Helix	0.83	1.00
 1BNI	Ali-C	A32D	AD	Helix	0.83	0.70
 1CSP	Ali-C	A46E	AE	Sheet	0.19	0.60
