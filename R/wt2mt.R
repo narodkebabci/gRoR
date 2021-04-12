@@ -58,9 +58,11 @@ wt2mt <- function(data, mutations){
 
   }
 
-  return(corrplot(udx, method = "color", is.corr = FALSE, addgrid.col = TRUE, addCoef.col = "black",
-                  tl.cex = 1, tl.col="black", tl.srt=45, cl.pos = "n"))
+  col_pal <- colorRampPalette(c("red", "white", "dodgerblue3"))
 
+  return(corrplot(udx, method = "color", col = col_pal(200), is.corr = FALSE, addgrid.col = TRUE,
+                  addCoef.col = "black",
+                  tl.cex = 1, tl.col="black", tl.srt=0, cl.pos = "n"))
 }
 
 
