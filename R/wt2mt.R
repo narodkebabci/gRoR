@@ -19,16 +19,16 @@ wt2mt <- function(data, mutations){
   wt <- vector("character", length = nrow(data))
 
   for (i in 1:nrow(data)){
-    wt[i] <- stri_sub(data[, "Mutation"][i], from=-stri_length(data[, "Mutation"][i]),
-                      to=-stri_length(data[, "Mutation"][i]))
+    wt[i] <- stri_sub(data[, mutations][i], from=-stri_length(data[, mutations][i]),
+                      to=-stri_length(data[, mutations][i]))
   }
 
   # extract the mt in a vector
   mt <- vector("character", length = nrow(data))
 
   for (j in 1:nrow(data)){
-    mt[j] <- stri_sub(data[, "Mutation"][j], from=stri_length(data[, "Mutation"][j]),
-                      to=stri_length(data[, "Mutation"][j]))
+    mt[j] <- stri_sub(data[, mutations][j], from=stri_length(data[, mutations][j]),
+                      to=stri_length(data[, mutations][j]))
   }
 
   q <- data.frame(cbind(wt, mt))
@@ -58,11 +58,9 @@ wt2mt <- function(data, mutations){
 
   }
 
-  col_pal <- colorRampPalette(c("red", "white", "dodgerblue3"))
+  return(corrplot(udx, method = "color", is.corr = FALSE, addgrid.col = TRUE, addCoef.col = "black",
+                  tl.cex = 1, tl.col="black", tl.srt=45, cl.pos = "n"))
 
-  return(corrplot(udx, method = "color", col = col_pal(200), is.corr = FALSE, addgrid.col = TRUE,
-                  addCoef.col = "black",
-                  tl.cex = 1, tl.col="black", tl.srt=0, cl.pos = "n"))
 }
 
 

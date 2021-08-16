@@ -149,7 +149,7 @@ ranged_class_reduction <- function(data, classes, DDG, r, SS = NULL, ASA = NULL)
       n <- 3
 
       # create df1, ASA lower than 0.30
-      df1 <- df[df[, ASA] <= 0.10, ]
+      df1 <- df[df[, ASA] < 0.30, ]
 
       if (nrow(df1) != 0){
 
@@ -233,7 +233,7 @@ ranged_class_reduction <- function(data, classes, DDG, r, SS = NULL, ASA = NULL)
       }
 
       # create df2, ASA between 0.30 and 0.70
-      df2 <- df[df[, ASA] > 0.10 & df[, ASA] < 0.50, ]
+      df2 <- df[df[, ASA] >= 0.30 & df[, ASA] < 0.70, ]
 
       if (nrow(df2) != 0){
 
@@ -318,7 +318,7 @@ ranged_class_reduction <- function(data, classes, DDG, r, SS = NULL, ASA = NULL)
       }
 
       # create df3, ASA greater than 0.70
-      df3 <- df[df[, ASA] >= 0.50, ]
+      df3 <- df[df[, ASA] >= 0.70, ]
 
       if (nrow(df3) != 0){
 
@@ -421,7 +421,7 @@ ranged_class_reduction <- function(data, classes, DDG, r, SS = NULL, ASA = NULL)
 
         ddf <- df[which(df[, SS] %in% st), ]
 
-        df1 <- ddf[ddf[, ASA] <= 0.10, ]
+        df1 <- ddf[ddf[, ASA] < 0.30, ]
 
         if (nrow(df1) != 0){
 
@@ -455,7 +455,7 @@ ranged_class_reduction <- function(data, classes, DDG, r, SS = NULL, ASA = NULL)
 
             }else {
 
-              df1_1 <- df1[df1[, DDG] >= interval[i] & df1[, DDG] <= interval[i+1], ]
+              df1_1 <- df1[df1[, DDG] >= interval[i] & df1[, DDG] < interval[i+1], ]
 
             }
 
@@ -504,7 +504,7 @@ ranged_class_reduction <- function(data, classes, DDG, r, SS = NULL, ASA = NULL)
           }
         }
 
-        df2 <- ddf[ddf[, ASA] > 0.10 & ddf[, ASA] < 0.50, ]
+        df2 <- ddf[ddf[, ASA] >= 0.30 & ddf[, ASA] < 0.70, ]
 
         if (nrow(df2) != 0){
 
@@ -588,7 +588,7 @@ ranged_class_reduction <- function(data, classes, DDG, r, SS = NULL, ASA = NULL)
           }
         }
 
-        df3 <- ddf[ddf[, ASA] >= 0.50, ]
+        df3 <- ddf[ddf[, ASA] >= 0.70, ]
 
         if (nrow(df3) != 0){
 
@@ -758,11 +758,7 @@ ranged_class_reduction <- function(data, classes, DDG, r, SS = NULL, ASA = NULL)
 
       idx <- na.omit(idx)
 
-      # replace xn with the max of the interval
-      idx[nrow(idx),] <- df[which.max(df[, DDG]),]
-
     }
-
   }
 
   # label the datasets to create box plots
@@ -780,8 +776,7 @@ ranged_class_reduction <- function(data, classes, DDG, r, SS = NULL, ASA = NULL)
     geom_boxplot(aes(fill = Plot_Labels)) +
     labs(x="Labels", y="DDG Values") +
     theme_light() +
-    theme(legend.position = "right", legend.title = element_blank(),
-          axis.title.x = element_blank())
+    theme(legend.position = "right")
 
   # return(bp)
 

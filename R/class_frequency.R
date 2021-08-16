@@ -19,16 +19,16 @@ class_frequency <- function(data, mutations){
   wt <- vector("character", length = nrow(data))
 
   for (i in 1:nrow(data)){
-    wt[i] <- stri_sub(data[, "Mutation"][i], from=-stri_length(data[, "Mutation"][i]),
-                      to=-stri_length(data[, "Mutation"][i]))
+    wt[i] <- stri_sub(data[, mutations][i], from=-stri_length(data[, mutations][i]),
+                      to=-stri_length(data[, mutations][i]))
   }
 
   # extract the mt in a vector
   mt <- vector("character", length = nrow(data))
 
   for (j in 1:nrow(data)){
-    mt[j] <- stri_sub(data[, "Mutation"][j], from=stri_length(data[, "Mutation"][j]),
-                      to=stri_length(data[, "Mutation"][j]))
+    mt[j] <- stri_sub(data[, mutations][j], from=stri_length(data[, mutations][j]),
+                      to=stri_length(data[, mutations][j]))
   }
 
   #create a dataframe from wt, mt
@@ -77,14 +77,12 @@ class_frequency <- function(data, mutations){
 
     udx[lv1, kv1] = 1 + udx[lv1, kv1]
 
-  }
-
-  col_pal <- colorRampPalette(c("red", "white", "dodgerblue3"))
-
-  return(corrplot(udx, method = "color", col = col_pal(200), type = "full", is.corr = FALSE,
-                  addgrid.col = TRUE, addCoef.col = "black", cl.lim=c(min(udx)-1, max(udx)+1),
+}
+  return(corrplot(udx, method = "color", type = "full", is.corr = FALSE, addgrid.col = TRUE,
+                  addCoef.col = "black", cl.lim=c(min(udx)-1, max(udx)+1),
                   tl.pos = "lt", tl.cex = 1.2, tl.col="black", tl.srt=0, cl.pos = "n",
                   number.cex = 2))
+
 }
 
 
