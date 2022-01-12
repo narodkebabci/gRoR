@@ -160,8 +160,8 @@ ranged_duplet_reduction <- function(data, duplets, DDG, r, SS = NULL, ASA = NULL
 
         df <- df[order(df[, DDG]),][1:length(df[, DDG]),]
 
-        # create df1, ASA lower than 0.30
-        df1 <- df[df[, ASA] < 0.30, ]
+        # create df1, ASA lower than and equall to 0.10
+        df1 <- df[df[, ASA] <= 0.10, ]
 
         if (nrow(df1) != 0){
 
@@ -245,7 +245,7 @@ ranged_duplet_reduction <- function(data, duplets, DDG, r, SS = NULL, ASA = NULL
         }
 
         # create df2, ASA between 0.30 and 0.70
-        df2 <- df[df[, ASA] >= 0.30 & df[, ASA] < 0.70, ]
+        df2 <- df[df[, ASA] > 0.10 & df[, ASA] < 0.50, ]
 
         if (nrow(df2) != 0){
 
@@ -330,7 +330,7 @@ ranged_duplet_reduction <- function(data, duplets, DDG, r, SS = NULL, ASA = NULL
         }
 
         # create df3, ASA greater than 0.70
-        df3 <- df[df[, ASA] >= 0.70, ]
+        df3 <- df[df[, ASA] >= 0.50, ]
 
         if (nrow(df3) != 0){
 
@@ -443,8 +443,8 @@ ranged_duplet_reduction <- function(data, duplets, DDG, r, SS = NULL, ASA = NULL
 
           ddf <- df[which(df[, SS] %in% st), ]
 
-          # create df1, ASA lower than 0.30
-          df1 <- ddf[ddf[, ASA] < 0.30, ]
+          # create df1, ASA lower than and equall to 0.10
+          df1 <- ddf[ddf[, ASA] <= 0.10, ]
 
           if (nrow(df1) != 0){
 
@@ -527,8 +527,8 @@ ranged_duplet_reduction <- function(data, duplets, DDG, r, SS = NULL, ASA = NULL
             }
           }
 
-          # create df2, ASA between 0.30 and 0.70
-          df2 <- ddf[ddf[, ASA] >= 0.30 & ddf[, ASA] < 0.70, ]
+          # create df2, ASA between 0.10 and 0.50
+          df2 <- ddf[ddf[, ASA] > 0.10 & ddf[, ASA] < 0.50, ]
 
           if (nrow(df2) != 0){
 
@@ -612,8 +612,8 @@ ranged_duplet_reduction <- function(data, duplets, DDG, r, SS = NULL, ASA = NULL
             }
           }
 
-          # create df3, ASA greater than 0.70
-          df3 <- ddf[ddf[, ASA] >= 0.70, ]
+          # create df3, ASA greater than 0.50
+          df3 <- ddf[ddf[, ASA] >= 0.50, ]
 
           if (nrow(df3) != 0){
 
